@@ -10,7 +10,7 @@ const HeroSection = () => {
               Consultoría para Pymes
             </p>
             <h1 className="font-heading text-3xl leading-tight text-primary-foreground md:text-4xl lg:text-5xl animate-fade-in-up">
-              Ayudo a dueños de pymes a ordenar su empresa, escalar su negocio y delegar tareas operativas.
+              Ayudo a emprendedores y dueños de pymes a ordenar su empresa, escalar su negocio y delegar tareas operativas.
             </h1>
             <p className="text-lg italic text-primary-foreground/70">
               "Ordenar la información para tomar la mejor decisión."
