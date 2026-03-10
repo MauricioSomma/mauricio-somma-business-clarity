@@ -11,14 +11,14 @@ const ContactSection = () => {
           Agendá una conversación sin compromiso. Vamos a analizar juntos dónde está tu empresa hoy y hacia dónde puede ir.
         </p>
         <a
-          href="mailto:contacto@mauriciosomma.com"
+          href="mailto:mauricio.somma@gmail.com"
           className="inline-flex items-center gap-3 rounded-lg bg-accent px-10 py-4 text-lg font-semibold text-accent-foreground transition-opacity hover:opacity-90"
         >
           <Mail className="h-5 w-5" />
           Escribime
         </a>
         <p className="mt-6 text-sm text-primary-foreground/50">
-          contacto@mauriciosomma.com
+          mauricio.somma@gmail.com
         </p>
       </div>
     </section>
