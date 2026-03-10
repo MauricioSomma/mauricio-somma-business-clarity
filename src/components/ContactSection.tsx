@@ -18,7 +18,7 @@ const ContactSection = () => {
           Escribime
         </a>
         <p className="mt-6 text-sm text-primary-foreground/50">
-          mauricio.somma@gmail.com
+          Contacto: mauricio.somma@gmail.com
         </p>
       </div>
     </section>
