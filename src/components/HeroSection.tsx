@@ -17,25 +17,25 @@ const HeroSection = () => {
             </p>
             <a
               href="#contacto"
-              className="mt-4 inline-block rounded-lg bg-accent px-8 py-3 font-semibold text-accent-foreground transition-opacity hover:opacity-90"
-            >
+              className="mt-4 inline-block rounded-lg bg-accent px-8 py-3 font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+              
               Agendá una conversación
             </a>
           </div>
           <div className="w-56 flex-shrink-0 md:w-72 lg:w-80">
             <img
-              src={mauricioImg}
+
               alt="Mauricio Somma - Consultor de negocios"
               className="rounded-2xl shadow-2xl"
               width={320}
               height={400}
-              loading="eager"
-            />
+              loading="eager" src="/lovable-uploads/05f6b548-1379-4f1f-a1e1-102aa503cedb.jpg" />
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
