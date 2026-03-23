@@ -29,7 +29,7 @@ const HeroSection = () => {
               className="rounded-2xl shadow-2xl"
               width={320}
               height={400}
-              loading="eager" src="/lovable-uploads/05f6b548-1379-4f1f-a1e1-102aa503cedb.jpg" />
+              loading="eager" src={mauricioImg} />
             
           </div>
         </div>
