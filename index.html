@@ -1,24 +1,670 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mauricio Somma | Consultor de Negocios para Pymes</title>
-    <meta name="description" content="Ayudo a dueños de pymes a ordenar su empresa, escalar su negocio y delegar tareas operativas. Más de 20 años de experiencia." />
-    <meta name="author" content="Mauricio Somma" />
-    <meta property="og:title" content="Mauricio Somma | Consultor de Negocios" />
-    <meta property="og:description" content="Ayudo a dueños de pymes a ordenar su empresa, escalar su negocio y delegar tareas operativas." />
-    <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mauricio Somma | Recuperá el control de tu empresa</title>
+<meta name="description" content="Ayudo a empresas en crecimiento que perdieron el control de su operación a recuperar claridad para volver a tomar mejores decisiones. Método Reconstrucción.">
+<meta property="og:title" content="Mauricio Somma | Recuperá el control de tu empresa">
+<meta property="og:description" content="Recuperá claridad para volver a tomar el control. Método Reconstrucción.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%231b1d30'/%3E%3Ctext%20x='50'%20y='54'%20font-family='Georgia,%20Times%20New%20Roman,%20serif'%20font-size='52'%20font-weight='700'%20fill='%23ffffff'%20text-anchor='middle'%20dominant-baseline='central'%3EMS%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%231b1d30'/%3E%3Ctext%20x='50'%20y='54'%20font-family='Georgia,%20serif'%20font-size='52'%20font-weight='700'%20fill='%23ffffff'%20text-anchor='middle'%20dominant-baseline='central'%3EMS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f6f7f9;
+    --bg-soft2:#eef1f4;
+    --ink:#0c1622;
+    --ink-2:#3a4656;
+    --ink-3:#697587;
+    --petrol:#0d3b46;
+    --deep:#0a2540;
+    --green:#0fb27e;
+    --green-soft:#e7f7f1;
+    --line:#e7eaee;
+    --radius:18px;
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.6;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  section{padding:120px 0}
+  h1,h2,h3{letter-spacing:-0.025em;line-height:1.05;font-weight:800}
+  p{color:var(--ink-2)}
+  a{color:inherit;text-decoration:none}
+  .eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:22px}
+  .lead{font-size:clamp(1.1rem,1.6vw,1.32rem);color:var(--ink-3);max-width:620px}
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{font-weight:800;letter-spacing:-.02em;font-size:1.05rem}
+  .brand span{color:var(--green)}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-size:.94rem;font-weight:500;color:var(--ink-2);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a.btn-primary{color:#fff}
+  .nav-links a.btn-primary:hover{color:#fff}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.95rem;padding:13px 24px;border-radius:999px;transition:transform .18s ease, box-shadow .25s ease, background .25s}
+  .btn-primary{background:var(--ink);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(12,22,34,.5)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{background:var(--bg-soft)}
+  .btn-lg{padding:17px 32px;font-size:1.02rem}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+  .menu-btn svg{width:26px;height:26px;stroke:var(--ink)}
+
+  /* HERO */
+  .hero{padding:118px 0 96px}
+  .hero .kicker{font-size:clamp(1.05rem,1.7vw,1.28rem);color:var(--ink-3);font-weight:500;max-width:640px;margin-bottom:26px}
+  .hero h1{font-size:clamp(2.7rem,6.4vw,5rem);font-weight:900;max-width:880px;margin-bottom:30px}
+  .hero h1 em{font-style:normal;color:var(--petrol)}
+  .hero .sub{font-size:clamp(1.12rem,1.7vw,1.4rem);color:var(--ink-2);max-width:600px;margin-bottom:40px;font-weight:450}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .hero-note{font-size:.9rem;color:var(--ink-3)}
+
+  /* TAGLINE BAND */
+  .band{background:var(--deep);color:#fff}
+  .band.petrol{background:var(--petrol)}
+  .band-inner{padding:78px 0;text-align:center}
+  .band h2{font-size:clamp(1.7rem,3.4vw,2.7rem);font-weight:800;color:#fff;max-width:880px;margin:0 auto}
+  .band h2 em{font-style:normal;color:var(--green)}
+  .band .small{display:block;font-size:1.05rem;font-weight:500;color:rgba(255,255,255,.6);margin-top:18px;letter-spacing:.01em}
+
+  /* SECTION HEADERS */
+  .sec-head{max-width:680px;margin-bottom:60px}
+  .sec-head h2{font-size:clamp(2rem,3.8vw,3rem);margin-bottom:20px}
+  .sec-head p{font-size:1.15rem;color:var(--ink-3)}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+
+  /* IDENTIFY CHECKLIST */
+  .identify{background:var(--bg-soft)}
+  .ident-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .ident-item{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px}
+  .ident-item .chk{flex:none;width:26px;height:26px;border-radius:50%;background:var(--green-soft);display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .ident-item .chk svg{width:15px;height:15px;stroke:var(--green);stroke-width:3}
+  .ident-item p{color:var(--ink);font-weight:500;font-size:1.05rem}
+
+  /* TRANSFORMATION */
+  .trans-grid{display:grid;grid-template-columns:1fr;gap:14px;max-width:860px;margin:0 auto}
+  .trans-row{display:grid;grid-template-columns:1fr 56px 1fr;align-items:center;gap:10px}
+  .trans-cell{padding:22px 24px;border-radius:14px;font-weight:600;font-size:1.05rem;display:flex;align-items:center;gap:13px}
+  .trans-before{background:var(--bg-soft);color:var(--ink-2)}
+  .trans-after{background:var(--petrol);color:#fff}
+  .trans-arrow{display:flex;align-items:center;justify-content:center;color:var(--ink-3)}
+  .trans-arrow svg{width:22px;height:22px}
+  .dot{width:9px;height:9px;border-radius:50%;flex:none}
+  .dot.red{background:#e8826b}
+  .dot.grn{background:var(--green)}
+
+  /* METHOD */
+  .method{background:var(--deep);color:#fff}
+  .method .sec-head h2{color:#fff}
+  .method .sec-head p{color:rgba(255,255,255,.62)}
+  .method-name{display:inline-block;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);border:1px solid rgba(15,178,126,.35);padding:7px 16px;border-radius:999px;margin-bottom:26px}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;counter-reset:s}
+  .step{position:relative;padding-top:34px}
+  .step .num{font-size:2.6rem;font-weight:900;color:rgba(255,255,255,.16);line-height:1;margin-bottom:14px}
+  .step h3{font-size:1.22rem;color:#fff;margin-bottom:10px;font-weight:700}
+  .step p{font-size:.96rem;color:rgba(255,255,255,.66)}
+  .step::before{content:"";position:absolute;top:8px;left:0;width:38px;height:3px;border-radius:2px;background:var(--green)}
+
+  /* WHAT YOU GET */
+  .get-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+  .get-item{text-align:center;padding:30px 14px}
+  .get-ic{width:54px;height:54px;border-radius:14px;background:var(--green-soft);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+  .get-ic svg{width:26px;height:26px;stroke:var(--petrol);stroke-width:2;fill:none}
+  .get-item h3{font-size:1.1rem;margin-bottom:6px}
+  .get-item p{font-size:.92rem;color:var(--ink-3)}
+
+  /* ABOUT */
+  .about{background:var(--bg-soft)}
+  .about-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:center}
+  .about-photo{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(150deg,var(--petrol),var(--deep));display:flex;align-items:flex-end;padding:30px;color:rgba(255,255,255,.5);font-size:.85rem}
+  .about-photo span{border:1px dashed rgba(255,255,255,.3);padding:8px 12px;border-radius:8px}
+  .about-text h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:26px}
+  .about-text p{font-size:1.13rem;margin-bottom:18px;color:var(--ink-2)}
+  .about-text strong{color:var(--ink);font-weight:700}
+
+  /* STATS */
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+  .stat{text-align:center}
+  .stat .big{font-size:clamp(2.4rem,4vw,3.4rem);font-weight:900;color:var(--petrol);letter-spacing:-.03em;line-height:1}
+  .stat p{margin-top:12px;font-size:1rem;color:var(--ink-3);font-weight:500}
+
+  /* CASE */
+  .case-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 60px -40px rgba(12,22,34,.25)}
+  .case-top{padding:34px 40px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .case-top h3{font-size:1.4rem}
+  .case-tag{font-size:.82rem;font-weight:700;color:var(--green);background:var(--green-soft);padding:7px 15px;border-radius:999px;letter-spacing:.02em}
+  .case-body{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+  .case-block{padding:32px 40px;border-bottom:1px solid var(--line)}
+  .case-block:nth-child(odd){border-right:1px solid var(--line)}
+  .case-block h4{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px;font-weight:700}
+  .case-block p{font-size:1.02rem;color:var(--ink-2)}
+  .case-block ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .case-block li{display:flex;gap:10px;align-items:center;font-size:1rem;color:var(--ink-2)}
+  .case-block li svg{width:16px;height:16px;stroke:var(--green);stroke-width:3;flex:none}
+  .case-state{padding:26px 40px;background:var(--bg-soft);font-size:.98rem;color:var(--ink-3)}
+  .case-state strong{color:var(--ink-2)}
+
+  /* COST */
+  .cost{background:var(--petrol);color:#fff;text-align:center}
+  .cost h2{font-size:clamp(1.7rem,3.2vw,2.5rem);color:#fff;max-width:760px;margin:0 auto 30px}
+  .cost-list{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:780px;margin:0 auto}
+  .cost-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:13px 22px;border-radius:999px;font-size:1rem;color:rgba(255,255,255,.92);font-weight:500}
+
+  /* CONTACT */
+  .contact{background:var(--bg-soft)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:start}
+  .contact-left h2{font-size:clamp(2rem,3.6vw,2.9rem);margin-bottom:20px}
+  .contact-left p{font-size:1.15rem;color:var(--ink-2);margin-bottom:18px}
+  .contact-left .lema{font-size:1.05rem;color:var(--petrol);font-weight:600;border-left:3px solid var(--green);padding-left:18px;margin-top:30px}
+  form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:0 30px 60px -45px rgba(12,22,34,.3)}
+  .field{margin-bottom:20px}
+  .field label{display:block;font-size:.9rem;font-weight:600;margin-bottom:8px;color:var(--ink)}
+  .field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:11px;padding:13px 15px;font-family:inherit;font-size:1rem;color:var(--ink);background:var(--bg);transition:border .2s, box-shadow .2s}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--petrol);box-shadow:0 0 0 4px rgba(13,59,70,.08)}
+  .field textarea{resize:vertical;min-height:96px}
+  form .btn-primary{width:100%;justify-content:center;background:var(--petrol)}
+  form .btn-primary:hover{background:var(--deep)}
+  .alt{margin-top:22px;text-align:center;font-size:.95rem;color:var(--ink-3)}
+  .alt-links{display:flex;gap:14px;justify-content:center;margin-top:12px}
+  .alt-links a{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);font-size:.95rem;border:1px solid var(--line);padding:10px 18px;border-radius:999px;transition:background .2s}
+  .alt-links a:hover{background:var(--bg-soft2)}
+  .alt-links svg{width:17px;height:17px}
+  .form-ok{display:none;background:var(--green-soft);border:1px solid rgba(15,178,126,.3);border-radius:var(--radius);padding:34px;text-align:center}
+  .form-ok strong{display:block;font-size:1.2rem;color:var(--petrol);margin-bottom:8px}
+  .form-ok p{color:var(--ink-2)}
+
+  /* FOOTER */
+  footer{padding:54px 0;border-top:1px solid var(--line);background:#fff}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+  .foot .brand{font-size:1rem}
+  .foot p{font-size:.88rem;color:var(--ink-3)}
+  .foot a{font-size:.9rem;color:var(--ink-2);font-weight:500}
+
+  /* HERO PROC */
+  .hero .sub{margin-bottom:14px}
+  .hero-proc{font-size:1.05rem;color:var(--ink-3);max-width:560px;margin-bottom:40px;font-weight:450}
+
+  /* METHOD PATH */
+  .path{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin-top:14px}
+  .path::before{content:"";position:absolute;top:27px;left:9%;right:9%;height:2px;background:linear-gradient(90deg,rgba(15,178,126,.12),rgba(15,178,126,.85),rgba(15,178,126,.12))}
+  .node{position:relative;text-align:center;padding:0 12px}
+  .node .circle{width:56px;height:56px;border-radius:50%;background:var(--deep);border:2px solid var(--green);color:#fff;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;box-shadow:0 0 0 7px var(--deep)}
+  .node h3{font-size:1.12rem;color:#fff;margin-bottom:9px;font-weight:700}
+  .node p{font-size:.93rem;color:rgba(255,255,255,.64)}
+
+  /* WHO */
+  .who{background:#fff;border-top:1px solid var(--line)}
+  .who-inner{padding:78px 0;text-align:center}
+  .who h3{font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:10px}
+  .who .sz{color:var(--ink-3);margin-bottom:28px;font-size:1.05rem}
+  .who-chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .who-chip{background:var(--bg-soft);border:1px solid var(--line);padding:11px 21px;border-radius:999px;font-weight:600;font-size:.98rem;color:var(--ink-2)}
+
+  /* CLOSING */
+  .closing{background:var(--deep);color:#fff;text-align:center}
+  .closing .band-inner{padding:104px 0}
+  .closing h2{font-size:clamp(1.7rem,3.4vw,2.6rem);color:#fff;max-width:840px;margin:0 auto}
+  .closing .hl{color:var(--green);display:block;margin-top:14px}
+  .closing p{font-size:1.22rem;color:rgba(255,255,255,.7);font-weight:500;margin-top:26px}
+
+  @media(max-width:900px){
+    .path{grid-template-columns:repeat(2,1fr);gap:36px 18px}
+    .path::before{display:none}
+    .node{text-align:left;padding:0}
+    .node .circle{margin-left:0;box-shadow:none}
+  }
+  @media(max-width:560px){ .path{grid-template-columns:1fr} }
+
+  /* HERO TRUST */
+  .hero-trust{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-top:32px;color:var(--ink-3);font-size:.92rem;font-weight:600}
+  .hero-trust span{display:inline-flex;align-items:center;gap:10px}
+  .hero-trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--green)}
+
+  /* PHOTO */
+  .about-photo{position:relative;overflow:hidden}
+  .about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+  .about-photo .ph-hint{position:relative;z-index:1;display:none}
+  .about-photo.noimg .ph-hint{display:inline-block}
+
+  /* FOOTER LINKS */
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+  .foot-links a,.foot-links span{font-size:.92rem;color:var(--ink-2);font-weight:500}
+  .foot-links a:hover{color:var(--ink)}
+
+  /* HERO GRID + PHOTO */
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .hero-grid h1{max-width:none;font-size:clamp(2.3rem,4vw,3.7rem)}
+  .hero-grid .sub,.hero-grid .hero-proc{max-width:none}
+  .hero-photo{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;background:var(--bg-soft);border:1px solid var(--line)}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
+  .hero-photo.noimg img{display:none}
+  .hero-photo .ph-hint{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;color:var(--ink-3);font-size:.92rem;padding:24px}
+  .hero-photo.noimg .ph-hint{display:flex}
+
+  /* FILTER */
+  .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:940px;margin:0 auto}
+  .filter-card{border:1px solid var(--line);border-radius:16px;padding:34px 32px;background:#fff}
+  .filter-card.no{background:var(--bg-soft)}
+  .filter-card h3{font-size:1.18rem;margin-bottom:20px}
+  .filter-card ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+  .filter-card li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-2);font-size:1.04rem}
+  .filter-card li svg{width:19px;height:19px;flex:none;margin-top:3px;fill:none;stroke-width:2.5}
+  .filter-card.no li svg{stroke:#e08a73}
+  .filter-card.si li svg{stroke:var(--green)}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:42px}
+    .hero-photo{max-width:360px}
+    .filter-grid{grid-template-columns:1fr}
+  }
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    section{padding:84px 0}
+    .nav-links{display:none}
+    .menu-btn{display:block}
+    .nav-links.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:20px 28px;gap:18px}
+    .steps{grid-template-columns:repeat(2,1fr);gap:30px}
+    .get-grid{grid-template-columns:repeat(2,1fr)}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:38px}
+    .about-photo{max-width:320px}
+    .stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 20px}
+    .case-body{grid-template-columns:1fr}
+    .case-block:nth-child(odd){border-right:none}
+  }
+  @media(max-width:560px){
+    .ident-grid{grid-template-columns:1fr}
+    .trans-row{grid-template-columns:1fr;gap:6px}
+    .trans-arrow{transform:rotate(90deg);height:26px}
+    .get-grid{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr}
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .hero-cta .btn{justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">Mauricio Somma<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#metodo">Método</a>
+      <a href="#como-trabajo">Caso real</a>
+      <a href="#sobre-mi">Sobre Mauricio</a>
+      <a href="#contacto" class="btn btn-primary">Contacto</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="kicker reveal">Tu empresa creció. ¿Por qué sentís que cada vez depende más de vos?</p>
+        <h1 class="reveal">Recuperá el <em>control</em> de tu empresa.</h1>
+        <p class="sub reveal">Recuperá la claridad para volver a tomar el control de tu negocio.</p>
+        <p class="hero-proc reveal">En 30 días vas a entender dónde está parado tu negocio y cuáles son las decisiones que más impacto pueden generar.</p>
+        <div class="hero-cta reveal">
+          <a href="#contacto" class="btn btn-primary btn-lg">Agendá una conversación de 20 min</a>
+          <span class="hero-note">Sin compromiso. Vemos juntos tu principal cuello de botella.</span>
+        </div>
+        <div class="hero-trust reveal">
+          <span>20+ años de experiencia</span>
+          <span>1.000+ personas lideradas</span>
+          <span>Método propio</span>
+        </div>
+      </div>
+      <div class="hero-photo reveal">
+        <img src="mauricio.jpg" alt="Mauricio Somma" onerror="this.parentNode.classList.add('noimg')">
+        <span class="ph-hint">Subí tu foto como <b>mauricio.jpg</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSITIONING BAND -->
+  <div class="band petrol">
+    <div class="wrap band-inner">
+      <h2 class="reveal">Ayudo a empresas en crecimiento que perdieron el control de su operación a recuperar <em>claridad</em> para volver a tomar mejores decisiones.</h2>
+      <span class="small reveal">La claridad siempre viene antes del crecimiento.</span>
+    </div>
+  </div>
+
+  <!-- IDENTIFY -->
+  <section class="identify" id="identify">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">¿Te suena familiar?</p>
+        <h2>¿Tu empresa se parece a esto?</h2>
+      </div>
+      <div class="ident-grid">
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Todo depende de vos.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Vivís apagando incendios.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>No sabés realmente cuánto ganás.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Tu equipo trabaja… pero igual todo termina pasando por vos.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Sentís que crecés… pero cada vez con menos control.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Llegás al final del día con la sensación de haber trabajado mucho… pero de no haber avanzado en lo importante.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSFORMATION -->
+  <section id="cambio">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">La transformación</p>
+        <h2>Lo que cambia después de trabajar juntos</h2>
+      </div>
+      <div class="trans-grid">
+        <div class="trans-row reveal">
+          <div class="trans-cell trans-before"><span class="dot red"></span>Todo depende de vos</div>
+          <div class="trans-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="trans-cell trans-after"><span class="dot grn"></span>Equipos con responsabilidades claras</div>
+        </div>
+        <div class="trans-row reveal">
+          <div class="trans-cell trans-before"><span class="dot red"></span>Decisiones por intuición</div>
+          <div class="trans-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="trans-cell trans-after"><span class="dot grn"></span>Números simples para decidir</div>
+        </div>
+        <div class="trans-row reveal">
+          <div class="trans-cell trans-before"><span class="dot red"></span>Procesos improvisados</div>
+          <div class="trans-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="trans-cell trans-after"><span class="dot grn"></span>Una empresa que funciona sin depender de vos</div>
+        </div>
+        <div class="trans-row reveal">
+          <div class="trans-cell trans-before"><span class="dot red"></span>No sabés cuánto ganás</div>
+          <div class="trans-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="trans-cell trans-after"><span class="dot grn"></span>Claridad sobre tus números</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="method" id="metodo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="method-name">Método Reconstrucción</span>
+        <h2>Cinco pasos para recuperar el control</h2>
+        <p>No improviso. Cada trabajo sigue el mismo método, para que el resultado sea siempre el mismo: volver a decidir con confianza.</p>
+      </div>
+      <div class="path">
+        <div class="node reveal"><div class="circle">1</div><h3>Comprender</h3><p>Entender tu negocio y a vos: qué te desvela y dónde sentís que perdiste el control.</p></div>
+        <div class="node reveal"><div class="circle">2</div><h3>Descubrir</h3><p>Encontrar dónde se te va hoy la plata, el tiempo y el foco.</p></div>
+        <div class="node reveal"><div class="circle">3</div><h3>Priorizar</h3><p>Definir las pocas cosas que de verdad mueven la aguja ahora.</p></div>
+        <div class="node reveal"><div class="circle">4</div><h3>Activar</h3><p>Pasar a la acción con un plan claro a 90 días.</p></div>
+        <div class="node reveal"><div class="circle">5</div><h3>Acompañar</h3><p>Sostener el cambio para que no vuelvas a perder el control.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="sobre-mi">
+    <div class="wrap">
+      <div class="about-text reveal" style="max-width:760px">
+        <p class="eyebrow">Sobre Mauricio</p>
+        <h2>Durante más de veinte años vi el mismo problema repetirse.</h2>
+        <p>Empresas que crecían. Que facturaban más. Pero que cada vez tenían <strong>menos control</strong>.</p>
+        <p>Con el tiempo descubrí que el problema nunca era solamente vender más. Era <strong>ordenar el crecimiento</strong>.</p>
+        <p>Y descubrí algo más profundo: el problema nunca era la <strong>falta de esfuerzo</strong>. Era la <strong>falta de claridad</strong>.</p>
+        <p>Por eso desarrollé el <strong>Método Reconstrucción</strong>: una forma simple y probada de devolverle a un dueño el control para volver a tomar buenas decisiones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS / AUTHORITY -->
+  <section id="autoridad">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat reveal"><div class="big">20+</div><p>años liderando empresas</p></div>
+        <div class="stat reveal"><div class="big">1.000+</div><p>personas gestionadas</p></div>
+        <div class="stat reveal"><div class="big" style="font-size:clamp(1.05rem,1.9vw,1.45rem);line-height:1.25">Estrategia · Operaciones · Desarrollo de Negocios</div><p>experiencia integral en gestión</p></div>
+        <div class="stat reveal"><div class="big" style="font-size:clamp(1.05rem,1.9vw,1.45rem);line-height:1.25">Reducción de costos vía rediseño de procesos</div><p>operaciones más eficientes</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section id="recibis" class="identify">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">El resultado</p>
+        <h2>¿Qué recibís?</h2>
+        <p style="margin-left:auto;margin-right:auto">No recibís un informe. Recuperás una forma distinta de dirigir tu empresa.</p>
+      </div>
+      <div class="get-grid">
+        <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Claridad</h3><p>Saber qué está pasando de verdad.</p></div>
+        <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h16M4 18h7"/></svg></div><h3>Prioridades</h3><p>Qué resolver primero.</p></div>
+        <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h3>Plan</h3><p>Un camino concreto a 90 días.</p></div>
+        <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 14v3M12 10v7M16 7v10"/></svg></div><h3>Números</h3><p>Los pocos que importan, a la vista.</p></div>
+        <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div><h3>Acompañamiento</h3><p>Que no te suelten a mitad de camino.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE / HOW I WORK -->
+  <section id="como-trabajo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Cómo trabajo</p>
+        <h2>El Método Reconstrucción, en un caso real</h2>
+        <p>Así trabajo. Un caso de aplicación, en desarrollo.</p>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-top">
+          <h3>Caso: empresa de servicios de salud mental</h3>
+          <span class="case-tag">En desarrollo</span>
+        </div>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>Situación inicial</h4>
+            <p>La empresa había crecido de manera sostenida, pero empezaba a enfrentar problemas de organización, seguimiento de oportunidades y poca visibilidad sobre algunos números operativos.</p>
+          </div>
+          <div class="case-block">
+            <h4>Objetivo</h4>
+            <p>Ordenar la operación, definir prioridades e incorporar herramientas de gestión simples para tomar decisiones con mayor claridad.</p>
+          </div>
+          <div class="case-block" style="border-right:1px solid var(--line)">
+            <h4>Intervención · Método Reconstrucción</h4>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Comprensión del negocio</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Priorización</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Definición de números clave</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Organización operativa</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Plan de trabajo</li>
+            </ul>
+          </div>
+          <div class="case-block">
+            <h4>Estado</h4>
+            <p>Proyecto iniciado en 2026, actualmente en desarrollo. Próximamente compartiremos resultados y aprendizajes.</p>
+          </div>
+        </div>
+        <div class="case-state">📈 <strong>Próximamente:</strong> tiempo de respuesta, organización y resultados medidos.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section class="who" id="con-quien">
+    <div class="wrap who-inner">
+      <p class="eyebrow reveal" style="margin-bottom:14px">¿Con quién trabajo?</p>
+      <h3 class="reveal">Empresas en crecimiento de 10 a 100 personas.</h3>
+      <p class="sz reveal">Que ya facturan, pero sienten que la operación se les fue de las manos.</p>
+      <div class="who-chips">
+        <span class="who-chip reveal">Servicios</span>
+        <span class="who-chip reveal">Distribución</span>
+        <span class="who-chip reveal">Tecnología</span>
+        <span class="who-chip reveal">Salud</span>
+        <span class="who-chip reveal">Comercios B2B</span>
+        <span class="who-chip reveal">Y más</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <section id="para-quien">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Para quién es</p>
+        <h2>Esto no es para todos. Y está bien.</h2>
+      </div>
+      <div class="filter-grid">
+        <div class="filter-card no reveal">
+          <h3>No es para vos si…</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Buscás soluciones mágicas o resultados de un día para el otro.</li>
+            <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>No estás dispuesto a cambiar cómo venís haciendo las cosas.</li>
+          </ul>
+        </div>
+        <div class="filter-card si reveal">
+          <h3>Sí es para vos si…</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Estás dispuesto a ordenar tu negocio.</li>
+            <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Querés volver a tomar el control y a decidir mejor.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COST OF INACTION -->
+  <div class="band cost">
+    <div class="wrap band-inner">
+      <h2 class="reveal">El costo de no ordenar una empresa rara vez aparece en un balance.</h2>
+      <div class="cost-list">
+        <span class="cost-chip reveal">Decisiones equivocadas</span>
+        <span class="cost-chip reveal">Tiempo perdido</span>
+        <span class="cost-chip reveal">Equipos desalineados</span>
+        <span class="cost-chip reveal">Clientes que se van</span>
+        <span class="cost-chip reveal">Un dueño trabajando 12 horas por día</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contacto">
+    <div class="wrap contact-grid">
+      <div class="contact-left reveal">
+        <p class="eyebrow">Hablemos</p>
+        <h2>Recuperemos el control de tu empresa.</h2>
+        <p>Agendá una conversación de 20 minutos. Veamos juntos cuál es el principal cuello de botella de tu negocio. Sin compromiso.</p>
+        <p>Dejame estas 4 respuestas y te escribo yo para coordinar el día.</p>
+        <p class="lema">“Cuando recuperás claridad, las buenas decisiones vuelven a aparecer.”</p>
+      </div>
+      <div class="reveal">
+        <!-- Formulario conectado a Formspree (xaqgbkyb). Las respuestas llegan a mauricio.somma@gmail.com. -->
+        <form id="contactForm" action="https://formspree.io/f/xaqgbkyb" method="POST">
+          <input type="hidden" name="_subject" value="Nueva consulta desde la web — conversación estratégica">
+          <div class="field">
+            <label for="nombre">¿Cómo te llamás?</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Nombre y apellido" required>
+          </div>
+          <div class="field">
+            <label for="empresa">¿Cuál es tu empresa y a qué se dedica?</label>
+            <input id="empresa" name="empresa" type="text" placeholder="Empresa y rubro" required>
+          </div>
+          <div class="field">
+            <label for="personas">¿Cuántas personas trabajan hoy en tu empresa?</label>
+            <input id="personas" name="personas" type="text" placeholder="Ej.: 25" required>
+          </div>
+          <div class="field">
+            <label for="desafio">¿Qué es lo que hoy más te preocupa de tu empresa?</label>
+            <textarea id="desafio" name="desafio" placeholder="Contame en pocas líneas qué es lo que más te complica…" required></textarea>
+          </div>
+          <div class="field">
+            <label for="contacto">¿A dónde te respondo? (email o WhatsApp)</label>
+            <input id="contacto" name="contacto" type="text" placeholder="tu@email.com o +54 9 11…" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Agendar mi conversación estratégica</button>
+        </form>
+        <div id="formOk" class="form-ok">
+          <strong>¡Gracias! Recibí tu mensaje.</strong>
+          <p>Te voy a escribir personalmente para coordinar la conversación.</p>
+        </div>
+        <div class="alt">
+          ¿Preferís otro medio?
+          <div class="alt-links">
+            <a href="mailto:mauricio.somma@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              Email
+            </a>
+            <a href="https://wa.me/5491149393132?text=Hola%20Mauricio,%20quiero%20recuperar%20el%20control%20de%20mi%20empresa." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.477-.957z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <div class="band closing">
+    <div class="wrap band-inner">
+      <h2 class="reveal">Una empresa no se transforma cuando vende más. Se transforma cuando vuelve a entender qué está pasando.<span class="hl">Recuperemos esa claridad.</span></h2>
+      <p class="reveal"><a href="#contacto" class="btn btn-primary btn-lg" style="background:var(--green);color:#03281d;margin-top:8px">Agendá una conversación</a></p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand">Mauricio Somma<span style="color:var(--green)">.</span></div>
+    <div class="foot-links">
+      <a href="https://www.linkedin.com/in/mauricio-somma" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:mauricio.somma@gmail.com">mauricio.somma@gmail.com</a>
+      <span>Buenos Aires</span>
+    </div>
+    <p>© <span id="yr"></span> Mauricio Somma</p>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  var mb=document.getElementById('menuBtn'),nl=document.getElementById('navLinks');
+  mb.addEventListener('click',function(){nl.classList.toggle('open')});
+  nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open')})});
+  // year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  // contact form: envío sin recargar (Formspree AJAX)
+  var f=document.getElementById('contactForm');
+  if(f){f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var btn=f.querySelector('button[type=submit]');var old=btn.textContent;
+    btn.textContent='Enviando…';btn.disabled=true;
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+    .then(function(r){
+      if(r.ok){f.style.display='none';document.getElementById('formOk').style.display='block';}
+      else{btn.textContent=old;btn.disabled=false;alert('Hubo un problema al enviar. Probá de nuevo, o escribime por mail o WhatsApp.');}
+    })
+    .catch(function(){btn.textContent=old;btn.disabled=false;alert('No se pudo enviar. Revisá tu conexión, o escribime por mail o WhatsApp.');});
+  });}
+</script>
+</body>
 </html>
