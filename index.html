@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mauricio Somma | Recuperá el control de tu empresa</title>
-<meta name="description" content="Ayudo a empresas en crecimiento que perdieron el control de su operación a recuperar claridad para volver a tomar mejores decisiones. Método Reconstrucción.">
-<meta property="og:title" content="Mauricio Somma | Recuperá el control de tu empresa">
-<meta property="og:description" content="Recuperá claridad para volver a tomar el control. Método Reconstrucción.">
+<title>Mauricio Somma | Hago crecer pymes sin que dependan de su dueño</title>
+<meta name="description" content="Ayudo a dueños de pymes a crecer de forma rentable y sostenible: estrategia comercial, gestión e indicadores, implementados junto a tu equipo. Más de 20 años de experiencia. Método 4E.">
+<meta property="og:title" content="Mauricio Somma | Consultor de negocios para pymes">
+<meta property="og:description" content="Hago que tu empresa crezca sin depender de vos: más ventas, mejor gestión y equipos que funcionan. Método 4E.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%231b1d30'/%3E%3Ctext%20x='50'%20y='54'%20font-family='Georgia,%20Times%20New%20Roman,%20serif'%20font-size='52'%20font-weight='700'%20fill='%23ffffff'%20text-anchor='middle'%20dominant-baseline='central'%3EMS%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%231b1d30'/%3E%3Ctext%20x='50'%20y='54'%20font-family='Georgia,%20serif'%20font-size='52'%20font-weight='700'%20fill='%23ffffff'%20text-anchor='middle'%20dominant-baseline='central'%3EMS%3C/text%3E%3C/svg%3E">
@@ -198,7 +198,7 @@
   .hero-proc{font-size:1.05rem;color:var(--ink-3);max-width:560px;margin-bottom:40px;font-weight:450}
 
   /* METHOD PATH */
-  .path{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin-top:14px}
+  .path{display:grid;grid-template-columns:repeat(4,1fr);position:relative;margin-top:14px}
   .path::before{content:"";position:absolute;top:27px;left:9%;right:9%;height:2px;background:linear-gradient(90deg,rgba(15,178,126,.12),rgba(15,178,126,.85),rgba(15,178,126,.12))}
   .node{position:relative;text-align:center;padding:0 12px}
   .node .circle{width:56px;height:56px;border-radius:50%;background:var(--deep);border:2px solid var(--green);color:#fff;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;box-shadow:0 0 0 7px var(--deep)}
@@ -298,6 +298,30 @@
     .hero-cta{flex-direction:column;align-items:stretch}
     .hero-cta .btn{justify-content:center}
   }
+  /* PILLARS */
+  .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pillar{border:1px solid var(--line);border-radius:16px;padding:32px 30px;background:#fff;transition:border .2s, transform .2s}
+  .pillar:hover{border-color:var(--green);transform:translateY(-3px)}
+  .pillar .pic{width:50px;height:50px;border-radius:13px;background:var(--green-soft);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .pillar .pic svg{width:24px;height:24px;stroke:var(--petrol);stroke-width:2;fill:none}
+  .pillar h3{font-size:1.25rem;margin-bottom:10px}
+  .pillar p{font-size:1rem;color:var(--ink-2)}
+  /* WHY ME */
+  .whyme{background:var(--bg-soft)}
+  .whyme-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .whyme-item{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px}
+  .whyme-item .chk{flex:none;width:28px;height:28px;border-radius:8px;background:var(--green-soft);display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .whyme-item .chk svg{width:16px;height:16px;stroke:var(--green);stroke-width:3}
+  .whyme-item h3{font-size:1.06rem;margin-bottom:5px}
+  .whyme-item p{font-size:.98rem;color:var(--ink-2)}
+  .whyme-lead{max-width:660px;margin-bottom:48px}
+  .whyme-model{margin-top:32px;background:var(--petrol);color:#fff;border-radius:16px;padding:30px 34px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  .whyme-model p{color:rgba(255,255,255,.92);font-size:1.08rem;font-weight:500;margin:0;flex:1;min-width:260px}
+  .whyme-model strong{color:#fff}
+  @media(max-width:900px){.pillars-grid{grid-template-columns:1fr}.whyme-grid{grid-template-columns:1fr}}
+  /* HERO QUESTIONS */
+  .hero-q{margin-bottom:26px;display:flex;flex-direction:column;gap:9px}
+  .hero-q p{font-size:clamp(1.02rem,1.45vw,1.18rem);color:var(--ink-2);font-weight:500;line-height:1.4;padding-left:16px;border-left:2px solid var(--green)}
 </style>
 </head>
 <body>
@@ -306,6 +330,7 @@
   <div class="wrap nav">
     <a href="#top" class="brand">Mauricio Somma<span>.</span></a>
     <nav class="nav-links" id="navLinks">
+      <a href="#servicios">Cómo ayudo</a>
       <a href="#metodo">Método</a>
       <a href="#como-trabajo">Caso real</a>
       <a href="#sobre-mi">Sobre Mauricio</a>
@@ -323,10 +348,15 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <p class="kicker reveal">Tu empresa creció. ¿Por qué sentís que cada vez depende más de vos?</p>
-        <h1 class="reveal">Recuperá el <em>control</em> de tu empresa.</h1>
-        <p class="sub reveal">Recuperá la claridad para volver a tomar el control de tu negocio.</p>
-        <p class="hero-proc reveal">En 30 días vas a entender dónde está parado tu negocio y cuáles son las decisiones que más impacto pueden generar.</p>
+        <p class="kicker reveal">Más claridad. Mejores decisiones. Mejores resultados.</p>
+        <h1 class="reveal">Ayudo a emprendedores y dueños de empresas a ordenar su negocio para tomar <em>mejores decisiones</em>.</h1>
+        <div class="hero-q reveal">
+          <p>¿Sentís que pasás el día apagando incendios?</p>
+          <p>¿Que la gestión comercial no termina de despegar?</p>
+          <p>¿Que todo depende de vos?</p>
+          <p>¿Que las decisiones se toman más por intuición que por información?</p>
+        </div>
+        <p class="sub reveal">Ordenemos juntos tu empresa para que vuelvas a decidir con claridad. Las implementamos junto a tu equipo, no en un PowerPoint que termina en un cajón.</p>
         <div class="hero-cta reveal">
           <a href="#contacto" class="btn btn-primary btn-lg">Agendá una conversación de 20 min</a>
           <span class="hero-note">Sin compromiso. Vemos juntos tu principal cuello de botella.</span>
@@ -334,7 +364,7 @@
         <div class="hero-trust reveal">
           <span>20+ años de experiencia</span>
           <span>1.000+ personas lideradas</span>
-          <span>Método propio</span>
+          <span>Método propio 4E</span>
         </div>
       </div>
       <div class="hero-photo reveal">
@@ -347,8 +377,8 @@
   <!-- POSITIONING BAND -->
   <div class="band petrol">
     <div class="wrap band-inner">
-      <h2 class="reveal">Ayudo a empresas en crecimiento que perdieron el control de su operación a recuperar <em>claridad</em> para volver a tomar mejores decisiones.</h2>
-      <span class="small reveal">La claridad siempre viene antes del crecimiento.</span>
+      <h2 class="reveal">Las mejores decisiones se basan en <em>información</em>, no en intuición.</h2>
+      <span class="small reveal">Cuando la información es clara, las buenas decisiones llegan solas.</span>
     </div>
   </div>
 
@@ -357,15 +387,15 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="eyebrow">¿Te suena familiar?</p>
-        <h2>¿Tu empresa se parece a esto?</h2>
+        <h2>¿Qué está frenando el crecimiento de tu empresa?</h2>
       </div>
       <div class="ident-grid">
-        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Todo depende de vos.</p></div>
-        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Vivís apagando incendios.</p></div>
-        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>No sabés realmente cuánto ganás.</p></div>
-        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Tu equipo trabaja… pero igual todo termina pasando por vos.</p></div>
-        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Sentís que crecés… pero cada vez con menos control.</p></div>
-        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Llegás al final del día con la sensación de haber trabajado mucho… pero de no haber avanzado en lo importante.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Las ventas se estancaron y no sabés bien por qué.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Todo depende de vos: si no estás, la empresa se frena.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Tu equipo trabaja mucho, pero los resultados no aparecen.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Decidís por intuición porque no tenés números confiables.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>La cobranza se volvió un dolor de cabeza.</p></div>
+        <div class="ident-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><p>Buscás un gerente que haga despegar el negocio y no aparece.</p></div>
       </div>
     </div>
   </section>
@@ -379,24 +409,52 @@
       </div>
       <div class="trans-grid">
         <div class="trans-row reveal">
-          <div class="trans-cell trans-before"><span class="dot red"></span>Todo depende de vos</div>
+          <div class="trans-cell trans-before"><span class="dot red"></span>Las ventas dependen de tu esfuerzo diario</div>
           <div class="trans-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <div class="trans-cell trans-after"><span class="dot grn"></span>Equipos con responsabilidades claras</div>
+          <div class="trans-cell trans-after"><span class="dot grn"></span>Un sistema comercial que genera ventas previsibles</div>
         </div>
         <div class="trans-row reveal">
           <div class="trans-cell trans-before"><span class="dot red"></span>Decisiones por intuición</div>
           <div class="trans-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <div class="trans-cell trans-after"><span class="dot grn"></span>Números simples para decidir</div>
+          <div class="trans-cell trans-after"><span class="dot grn"></span>Números simples para decidir y crecer</div>
         </div>
         <div class="trans-row reveal">
           <div class="trans-cell trans-before"><span class="dot red"></span>Procesos improvisados</div>
           <div class="trans-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <div class="trans-cell trans-after"><span class="dot grn"></span>Una empresa que funciona sin depender de vos</div>
+          <div class="trans-cell trans-after"><span class="dot grn"></span>Procesos y roles claros que sostienen el crecimiento</div>
         </div>
         <div class="trans-row reveal">
-          <div class="trans-cell trans-before"><span class="dot red"></span>No sabés cuánto ganás</div>
+          <div class="trans-cell trans-before"><span class="dot red"></span>Todo depende de vos</div>
           <div class="trans-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <div class="trans-cell trans-after"><span class="dot grn"></span>Claridad sobre tus números</div>
+          <div class="trans-cell trans-after"><span class="dot grn"></span>Una empresa que crece sin depender de vos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section id="servicios">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Cómo te ayudo</p>
+        <h2>Tres frentes. Un mismo objetivo: ayudarte a tomar mejores decisiones.</h2>
+        <p style="margin-left:auto;margin-right:auto">Todo lo que hago entra en uno de estos tres pilares. Y los tres apuntan a lo mismo: que tu empresa crezca sin depender de vos.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar reveal">
+          <div class="pic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg></div>
+          <h3>Comercial</h3>
+          <p>Diseño tu estrategia de venta, ordeno el proceso comercial —de la generación de demanda hasta la cobranza— y fortalezco a tu equipo para que las ventas crezcan en serio.</p>
+        </div>
+        <div class="pillar reveal">
+          <div class="pic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14v3M12 9v8M17 5v12"/></svg></div>
+          <h3>Gestión</h3>
+          <p>Implemento indicadores y tableros, ordeno procesos y profesionalizo la operación, para que decidas con datos y no con intuición.</p>
+        </div>
+        <div class="pillar reveal">
+          <div class="pic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+          <h3>Personas</h3>
+          <p>Formo líderes y acompaño a los equipos para que el crecimiento se sostenga sin depender de vos.</p>
         </div>
       </div>
     </div>
@@ -406,16 +464,44 @@
   <section class="method" id="metodo">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="method-name">Método Reconstrucción</span>
-        <h2>Cinco pasos para recuperar el control</h2>
-        <p>No improviso. Cada trabajo sigue el mismo método, para que el resultado sea siempre el mismo: volver a decidir con confianza.</p>
+        <span class="method-name">Método 4E</span>
+        <h2>Mi forma de trabajar, en cuatro pasos.</h2>
+        <p>No improviso ni te lleno de teoría. Sigo siempre el mismo método para llevar tu empresa de donde está hoy a un crecimiento que se sostiene.</p>
       </div>
       <div class="path">
-        <div class="node reveal"><div class="circle">1</div><h3>Comprender</h3><p>Entender tu negocio y a vos: qué te desvela y dónde sentís que perdiste el control.</p></div>
-        <div class="node reveal"><div class="circle">2</div><h3>Descubrir</h3><p>Encontrar dónde se te va hoy la plata, el tiempo y el foco.</p></div>
-        <div class="node reveal"><div class="circle">3</div><h3>Priorizar</h3><p>Definir las pocas cosas que de verdad mueven la aguja ahora.</p></div>
-        <div class="node reveal"><div class="circle">4</div><h3>Activar</h3><p>Pasar a la acción con un plan claro a 90 días.</p></div>
-        <div class="node reveal"><div class="circle">5</div><h3>Acompañar</h3><p>Sostener el cambio para que no vuelvas a perder el control.</p></div>
+        <div class="node reveal"><div class="circle">1</div><h3>Entender</h3><p>Me siento con vos a entender tu negocio de verdad: qué te quita el sueño y dónde se traba el crecimiento. Nada de diagnósticos de manual.</p></div>
+        <div class="node reveal"><div class="circle">2</div><h3>Estructurar</h3><p>Ordenamos los procesos y ponemos indicadores simples. Porque lo que no se mide, no se puede mejorar.</p></div>
+        <div class="node reveal"><div class="circle">3</div><h3>Ejecutar</h3><p>Bajamos a la cancha: implemento los cambios junto a tu equipo, no te dejo un PDF y me voy.</p></div>
+        <div class="node reveal"><div class="circle">4</div><h3>Escalar</h3><p>Consolidamos lo que funciona para que la empresa crezca sin que dependa de vos para todo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITMENT BAND -->
+  <div class="band petrol">
+    <div class="wrap band-inner">
+      <h2 class="reveal">Mi compromiso no termina ahí.</h2>
+      <span class="small reveal">A diferencia de una consultoría tradicional, sigo acompañando al dueño y al equipo: resuelvo nuevos desafíos, ajusto el rumbo cuando hace falta y me aseguro de que los cambios se sostengan en el tiempo.</span>
+    </div>
+  </div>
+
+  <!-- WHY ME -->
+  <section class="whyme" id="por-que">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">La diferencia</p>
+        <h2>¿Por qué trabajar conmigo?</h2>
+        <p class="whyme-lead">El consultor tradicional hace un diagnóstico, entrega un PowerPoint, factura y desaparece. Yo trabajo distinto: me meto adentro de tu empresa hasta que los cambios funcionan.</p>
+      </div>
+      <div class="whyme-grid">
+        <div class="whyme-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h3>No entrego informes para un cajón</h3><p>Implemento los cambios junto a tu equipo, no en una presentación.</p></div></div>
+        <div class="whyme-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h3>Trabajo con indicadores</h3><p>Medimos resultados, no opiniones. Si no mueve un número, no sirve.</p></div></div>
+        <div class="whyme-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h3>Me involucro como uno más</h3><p>Como si fuera parte de tu empresa, no un consultor de paso.</p></div></div>
+        <div class="whyme-item reveal"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h3>Mi objetivo es tu autonomía</h3><p>Que tu empresa crezca y deje de depender de vos para funcionar.</p></div></div>
+      </div>
+      <div class="whyme-model reveal">
+        <p><strong>Más que un consultor:</strong> te acompaño mes a mes en la dirección de tu empresa para resolver lo que vaya apareciendo. Un socio estratégico, no un proyecto de tres meses que termina y te deja solo.</p>
+        <a href="#contacto" class="btn btn-primary">Quiero esto para mi empresa</a>
       </div>
     </div>
   </section>
@@ -426,10 +512,10 @@
       <div class="about-text reveal" style="max-width:760px">
         <p class="eyebrow">Sobre Mauricio</p>
         <h2>Durante más de veinte años vi el mismo problema repetirse.</h2>
-        <p>Empresas que crecían. Que facturaban más. Pero que cada vez tenían <strong>menos control</strong>.</p>
-        <p>Con el tiempo descubrí que el problema nunca era solamente vender más. Era <strong>ordenar el crecimiento</strong>.</p>
-        <p>Y descubrí algo más profundo: el problema nunca era la <strong>falta de esfuerzo</strong>. Era la <strong>falta de claridad</strong>.</p>
-        <p>Por eso desarrollé el <strong>Método Reconstrucción</strong>: una forma simple y probada de devolverle a un dueño el control para volver a tomar buenas decisiones.</p>
+        <p>Empresas que crecían, que facturaban más, pero que cada vez tenían <strong>menos claridad</strong>.</p>
+        <p>Después de liderar <strong>operaciones, áreas comerciales y equipos</strong> durante más de veinte años, entendí algo: las empresas no dejan de crecer por falta de esfuerzo. Dejan de crecer porque pierden <strong>foco y dirección</strong>.</p>
+        <p>Por eso desarrollé el <strong>Método 4E</strong>: una forma simple y probada de ordenar una empresa para que <strong>crezca de forma rentable y sin depender de su dueño</strong>.</p>
+        <p>Y cuando un desafío necesita conocimiento específico —marketing digital, legal, selección, tecnología— lo resuelvo con una <strong>red de especialistas de confianza</strong>. Vos tenés un solo referente al frente: yo.</p>
       </div>
     </div>
   </section>
@@ -458,7 +544,7 @@
         <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Claridad</h3><p>Saber qué está pasando de verdad.</p></div>
         <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h16M4 18h7"/></svg></div><h3>Prioridades</h3><p>Qué resolver primero.</p></div>
         <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h3>Plan</h3><p>Un camino concreto a 90 días.</p></div>
-        <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 14v3M12 10v7M16 7v10"/></svg></div><h3>Números</h3><p>Los pocos que importan, a la vista.</p></div>
+        <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 14v3M12 10v7M16 7v10"/></svg></div><h3>Números</h3><p>Los pocos que importan, a la vista. Lo que no se mide, no se puede mejorar.</p></div>
         <div class="get-item reveal"><div class="get-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div><h3>Acompañamiento</h3><p>Que no te suelten a mitad de camino.</p></div>
       </div>
     </div>
@@ -468,37 +554,36 @@
   <section id="como-trabajo">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="eyebrow">Cómo trabajo</p>
-        <h2>El Método Reconstrucción, en un caso real</h2>
-        <p>Así trabajo. Un caso de aplicación, en desarrollo.</p>
+        <p class="eyebrow">Caso real</p>
+        <h2>El Método 4E aplicado, en un caso real</h2>
+        <p>Una historia concreta de cómo trabajo. Proyecto en marcha.</p>
       </div>
       <div class="case-card reveal">
         <div class="case-top">
-          <h3>Caso: empresa de servicios de salud mental</h3>
-          <span class="case-tag">En desarrollo</span>
+          <h3>Caso: Psiconexo</h3>
+          <span class="case-tag">En marcha</span>
         </div>
         <div class="case-body">
           <div class="case-block">
-            <h4>Situación inicial</h4>
-            <p>La empresa había crecido de manera sostenida, pero empezaba a enfrentar problemas de organización, seguimiento de oportunidades y poca visibilidad sobre algunos números operativos.</p>
+            <h4>Dónde estaban</h4>
+            <p>Psiconexo —una plataforma que ayuda a empresas a dar acceso a terapia para sus equipos— había crecido rápido. El problema ya no era conseguir clientes: era que la operación, el seguimiento de oportunidades y los números no acompañaban ese crecimiento.</p>
           </div>
           <div class="case-block">
-            <h4>Objetivo</h4>
-            <p>Ordenar la operación, definir prioridades e incorporar herramientas de gestión simples para tomar decisiones con mayor claridad.</p>
+            <h4>Qué encontramos</h4>
+            <p>Procesos que funcionaban de memoria, poca visibilidad sobre los números clave y decisiones que dependían de pocas personas. Mucho esfuerzo, poca claridad.</p>
           </div>
           <div class="case-block" style="border-right:1px solid var(--line)">
-            <h4>Intervención · Método Reconstrucción</h4>
+            <h4>Qué hicimos · Método 4E</h4>
             <ul>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Comprensión del negocio</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Priorización</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Definición de números clave</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Organización operativa</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Plan de trabajo</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Entender: diagnóstico a fondo del negocio</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Estructurar: procesos e indicadores clave</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ejecutar: los cambios, junto al equipo</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Escalar: ordenar para crecer sin perder el rumbo</li>
             </ul>
           </div>
           <div class="case-block">
-            <h4>Estado</h4>
-            <p>Proyecto iniciado en 2026, actualmente en desarrollo. Próximamente compartiremos resultados y aprendizajes.</p>
+            <h4>Hoy</h4>
+            <p>Proyecto en marcha desde 2026. Ya está más ordenado el seguimiento de oportunidades y los números clave empiezan a estar a la vista. Los resultados medidos los vamos a compartir a medida que avancen.</p>
           </div>
         </div>
         <div class="case-state">📈 <strong>Próximamente:</strong> tiempo de respuesta, organización y resultados medidos.</div>
@@ -542,7 +627,7 @@
           <h3>Sí es para vos si…</h3>
           <ul>
             <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Estás dispuesto a ordenar tu negocio.</li>
-            <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Querés volver a tomar el control y a decidir mejor.</li>
+            <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Querés hacer crecer tu empresa y dejar de depender de vos.</li>
           </ul>
         </div>
       </div>
@@ -568,10 +653,10 @@
     <div class="wrap contact-grid">
       <div class="contact-left reveal">
         <p class="eyebrow">Hablemos</p>
-        <h2>Recuperemos el control de tu empresa.</h2>
-        <p>Agendá una conversación de 20 minutos. Veamos juntos cuál es el principal cuello de botella de tu negocio. Sin compromiso.</p>
+        <h2>Demos el próximo paso de crecimiento.</h2>
+        <p>Agendá una conversación de 20 minutos. Veamos juntos cuál es el principal cuello de botella que hoy frena tu crecimiento. Sin compromiso.</p>
         <p>Dejame estas 4 respuestas y te escribo yo para coordinar el día.</p>
-        <p class="lema">“Cuando recuperás claridad, las buenas decisiones vuelven a aparecer.”</p>
+        <p class="lema">“Cuando ordenás y ves con claridad, el crecimiento llega y se sostiene.”</p>
       </div>
       <div class="reveal">
         <!-- Formulario conectado a Formspree (xaqgbkyb). Las respuestas llegan a mauricio.somma@gmail.com. -->
@@ -610,7 +695,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
               Email
             </a>
-            <a href="https://wa.me/5491149393132?text=Hola%20Mauricio,%20quiero%20recuperar%20el%20control%20de%20mi%20empresa." target="_blank" rel="noopener">
+            <a href="https://wa.me/5491149393132?text=Hola%20Mauricio,%20quiero%20hacer%20crecer%20mi%20empresa." target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.477-.957z"/></svg>
               WhatsApp
             </a>
@@ -623,7 +708,7 @@
   <!-- CLOSING -->
   <div class="band closing">
     <div class="wrap band-inner">
-      <h2 class="reveal">Una empresa no se transforma cuando vende más. Se transforma cuando vuelve a entender qué está pasando.<span class="hl">Recuperemos esa claridad.</span></h2>
+      <h2 class="reveal">Una empresa no crece de verdad por azar. Crece cuando se ordena, se mide y se decide con claridad.<span class="hl">Hagamos que la tuya crezca.</span></h2>
       <p class="reveal"><a href="#contacto" class="btn btn-primary btn-lg" style="background:var(--green);color:#03281d;margin-top:8px">Agendá una conversación</a></p>
     </div>
   </div>
